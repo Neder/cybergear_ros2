@@ -251,9 +251,9 @@ void CybergearSocketCanDriverNode::subscribeJointTrajectoryCallback(
   if (!has_this_joint_cmd) {
     return;
   }
-  if (msg->points.size() <= static_cast<unsigned int>(cmd_index)) {
-    return;
-  }
+  // if (msg->points.size() <= static_cast<unsigned int>(cmd_index)) {
+  //   return;
+  // }
   single_joint_trajectory_.reset();
   single_joint_trajectory_ = std::make_shared<SingleJointTrajectoryPoints>();
   if (single_joint_trajectory_) {
